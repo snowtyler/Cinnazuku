@@ -1,6 +1,14 @@
-# Cinnazuku
+<p align="center">
+  <img src="Icon.png" alt="Cinnazuku Logo" width="128" height="128" />
+</p>
 
-Updated version of Shizuku rebuilt to work flawlessly with Android 17 (Beta 3+ all the way up to QPR2 and stable release).
+<h1 align="center">Cinnazuku</h1>
+
+<p align="center">
+  <b>Updated version of Shizuku rebuilt to work flawlessly with Android 17 (Beta 3+ through QPR2 and stable release).</b>
+</p>
+
+---
 
 ## What is Cinnazuku?
 
