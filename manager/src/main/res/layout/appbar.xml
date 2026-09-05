@@ -6,7 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:fitsSystemWindows="true"
+    android:background="@drawable/ios_blur_glass_background"
+    app:elevation="0dp"
     app:liftOnScroll="true"
+    app:liftOnScrollColor="@color/ios_blur_scrolled_color"
     tools:viewBindingIgnore="true">
 
     <com.google.android.material.appbar.MaterialToolbar
