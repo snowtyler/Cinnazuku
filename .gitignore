@@ -11,3 +11,6 @@
 /manager/signing.properties
 /out
 /signing.properties
+
+# Kotlin incremental build cache
+.kotlin/
