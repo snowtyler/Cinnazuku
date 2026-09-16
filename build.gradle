@@ -28,7 +28,16 @@ apply from: 'api/manifest.gradle'
 def gitCommitId = 'git rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
 def gitCommitCount = Integer.parseInt('git rev-list --count HEAD'.execute([], project.rootDir).text.trim())
 def baseVersionName = "${api_version_major}.6.0"
+// Cinnazuku shares the applicationId "moe.shizuku.privileged.api" with the
+// original Shizuku on Google Play for full client compatibility. Because the
+// package matches, Play Store would otherwise offer the official Shizuku app
+// as an "update", which then fails to install due to the differing signing
+// certificate. Offsetting the versionCode above any value the Play listing
+// will ever reach makes Play consider this build newer, so no bogus update is
+// offered. Play caps versionCode at 2100000000; we stay well under it while
+// still incrementing per commit.
+def versionCodeBase = 2000000000
 ext {
-    versionCode = gitCommitCount
+    versionCode = versionCodeBase + gitCommitCount
     versionName = "${baseVersionName}.r${gitCommitCount}.${gitCommitId}"
 }
